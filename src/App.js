@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import HeroSection from "./components/HeroSection";
+import ListingContainer from "./components/ListingContainer";
+import SearchSection from "./components/SearchSection";
 
+// Page Layout
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="w-screen h-screen overflow-scroll">
+      <header className="border-b border-gray-600 px-10 py-8">
+        SpaceX Dashboard{" "}
       </header>
+      <main className="px-10">
+        <HeroSection />
+        <SearchSection />
+        <ListingContainer />
+      </main>
     </div>
   );
 }
