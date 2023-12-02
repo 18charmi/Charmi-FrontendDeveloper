@@ -1,6 +1,16 @@
+import { useEffect } from "react";
 import logo from "../logo.svg";
+import { getCompanyInfo } from "../services/axios";
 
 export default function HeroSection() {
+  useEffect(() => {
+    async function getDetails() {
+      const data = await getCompanyInfo();
+      console.log({ data });
+    }
+
+    getDetails();
+  }, []);
   return (
     <section className="py-10 flex flex-col md:flex-row justify-center items-start">
       <div className="pt-10 w-full md:w-2/5 text-center md:text-start">
